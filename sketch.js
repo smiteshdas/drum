@@ -31,8 +31,9 @@ function modelLoaded() {
 function gotResults(err,results) {
 	if(err){
 		console.log("Error")
+classifier.classify(gotResults)
 	}else{
-        labell = results.label[0];
+        labell = results[0].label;
 
         if(label == "play"){
         audio.play();
